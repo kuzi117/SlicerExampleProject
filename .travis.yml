@@ -1,0 +1,4 @@
+script:
+  - cmake .
+  - make -j4
+  - ./src/runTests
