@@ -1,5 +1,9 @@
 language: c
 
+# TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
+before_script:
+  - cp src/tests/unslicedTests.c src/tests/testSlice.c
+
 script:
   - cmake .
   - make -j4
