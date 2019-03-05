@@ -4,7 +4,7 @@
 
 #include "tests/AllTests.h"
 
-void RunAllTests(void) {
+int RunAllTests(void) {
   // Get and fill suite.
   CuSuite *suite = CuSuiteNew();
   getAllTests(suite);
@@ -18,13 +18,16 @@ void RunAllTests(void) {
   CuSuiteDetails(suite, output);
   printf("%s\n", output->buffer);
 
+  // Get return value.
+  int failCount = suite->failCount;
+
   // Clean up.
   CuStringDelete(output);
   CuSuiteDelete(suite);
+
+  return failCount;
 }
 
 int main() {
-  RunAllTests();
-
-  return 0;
+  return RunAllTests();
 }
