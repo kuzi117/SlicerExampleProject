@@ -1,3 +1,6 @@
 # CLion
 .idea/
 cmake-build-*/
+
+# Slicer
+src/tests/testSlice.c
