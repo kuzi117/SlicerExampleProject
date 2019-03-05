@@ -1,12 +1,14 @@
 # All of our tests.
 set(
   TEST_FILES
+    "${CMAKE_CURRENT_SOURCE_DIR}/xosTest.c"
   PARENT_SCOPE
 )
 
 # The CuTest file.
 set(
   CUTEST_FILE
+
     "${CMAKE_CURRENT_SOURCE_DIR}/CuTest.c"
   PARENT_SCOPE
 )
