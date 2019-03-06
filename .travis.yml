@@ -1,5 +1,16 @@
 language: c
 
+dist: xenial
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-xenial-8
+    packages:
+      - clang-8
+
+env:
+  - MATRIX_EVAL="CC=clang-8 && CXX=clang++-8"
+
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
   - cp src/tests/unslicedTests.c src/tests/testSlice.c
