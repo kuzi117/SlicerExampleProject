@@ -4,7 +4,11 @@ add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/tests")
 # Set tool source.
 set(
   TOOL_SOURCE
-    "${CMAKE_CURRENT_SOURCE_DIR}/main.c"
+)
+set(
+  TOOL_MAIN_SOURCE
+  ${TOOL_SOURCE}
+  "${CMAKE_CURRENT_SOURCE_DIR}/main.c"
 )
 
 # Set test souces (driver + subfiles).
@@ -14,6 +18,7 @@ set(
     ${TEST_FILES}
     ${CUTEST_FILE}
     ${SLICE_FILE}
+    ${TOOL_SOURCE}
 )
 
 # Add executables.
