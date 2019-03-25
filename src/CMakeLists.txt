@@ -1,9 +1,11 @@
 # Get subdirectory variables.
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/tests")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/xos")
 
 # Set tool source.
 set(
   TOOL_SOURCE
+    ${XO_SOURCE}
 )
 set(
   TOOL_MAIN_SOURCE

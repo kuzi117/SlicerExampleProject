@@ -14,5 +14,8 @@ void TestTileNoneValue(CuTest *test);
 void TestTileXValue(CuTest *test);
 void TestTileOValue(CuTest *test);
 void TestTileEnumMax(CuTest *test);
+void TestTurnX(CuTest *test);
+void TestTurnO(CuTest *test);
+void TestGameInit(CuTest *test);
 
 #endif // TOTEST_ALLTESTS_H

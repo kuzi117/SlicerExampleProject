@@ -1,3 +1,5 @@
+#include <xos/board.h>
+#include <stdint.h>
 #include "tests/AllTests.h"
 
 #include "xos/board.h"
@@ -22,3 +24,28 @@ void TestTileEnumMax(CuTest *test) {
   CuAssertIntEquals(test, 3, MAX_TILE_TYPE);
 }
 
+// Test that X turn is false.
+void TestTurnX(CuTest *test) {
+  CuAssertIntEquals(test, false, TURN_X);
+}
+
+// Test that O turn is true.
+void TestTurnO(CuTest *test) {
+  CuAssertIntEquals(test, true, TURN_O);
+}
+
+// Test that the game is inited correctly.
+void TestGameInit(CuTest *test) {
+  XOGame game;
+  initGame(&game);
+
+  // Correct turn.
+  CuAssertIntEquals(test, game.turn, TURN_X);
+
+  // Correct tiles.
+  for (uint8_t i = 0; i < 3; ++i) {
+    for (uint8_t j = 0; j < 3; ++j) {
+      CuAssertIntEquals(test, game.tiles[i][j], TILE_NONE);
+    }
+  }
+}
