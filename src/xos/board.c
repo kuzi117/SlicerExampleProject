@@ -16,4 +16,6 @@ void initGame(XOGame *game) {
 }
 
 void advanceTurn(XOGame *game) {
+  // Toggle turn.
+  game->turn = game->turn == TURN_X ? TURN_O : TURN_X;
 }
