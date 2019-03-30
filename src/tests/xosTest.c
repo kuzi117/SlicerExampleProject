@@ -49,3 +49,20 @@ void TestGameInit(CuTest *test) {
     }
   }
 }
+
+void TestAdvanceTurn(CuTest *test) {
+  XOGame game;
+  XOGame *gp = &game;
+  initGame(gp);
+
+  // Correct initial turn.
+  CuAssertIntEquals(test, game.turn, TURN_X);
+
+  // Advance turn, correct turn.
+  advanceTurn(gp);
+  CuAssertIntEquals(test, game.turn, TURN_O);
+
+  // Advance turn, correct turn.
+  advanceTurn(gp);
+  CuAssertIntEquals(test, game.turn, TURN_X);
+}

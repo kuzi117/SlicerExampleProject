@@ -8,4 +8,5 @@ void getAllTests(CuSuite *suite) {
   SUITE_ADD_TEST(suite, TestTurnX);
   SUITE_ADD_TEST(suite, TestTurnO);
   SUITE_ADD_TEST(suite, TestGameInit);
+  SUITE_ADD_TEST(suite, TestAdvanceTurn);
 }

@@ -20,6 +20,10 @@ typedef struct {
   Turn turn;
 } XOGame;
 
+// Init game.
 void initGame(XOGame *game);
+
+// Advance the turn.
+void advanceTurn(XOGame *game);
 
 #endif // TOTEST_XOS_BOARD_H

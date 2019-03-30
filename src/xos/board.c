@@ -1,10 +1,13 @@
 #include "xos/board.h"
 
 #include <stddef.h>
+#include <xos/board.h>
 
 void initGame(XOGame *game) {
+  // Init turn.
   game->turn = TURN_X;
 
+  // Init tiles.
   for (size_t i = 0; i < 3; ++i) {
     for (size_t j = 0; j < 3; ++j) {
       game->tiles[i][j] = TILE_NONE;
@@ -12,6 +15,5 @@ void initGame(XOGame *game) {
   }
 }
 
-bool playPosition(XOGame *game, unsigned int xPos, unsigned int yPos, Tile tile) {
-  game->tiles[yPos][xPos] = tile;
+void advanceTurn(XOGame *game) {
 }
