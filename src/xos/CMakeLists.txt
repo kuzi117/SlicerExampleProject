@@ -1,5 +1,6 @@
 set(
   XO_SOURCE
     "${CMAKE_CURRENT_SOURCE_DIR}/board.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/xos.c"
   PARENT_SCOPE
 )

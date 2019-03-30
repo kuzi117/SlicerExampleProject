@@ -24,4 +24,5 @@ set(
 )
 
 # Add executables.
+add_executable(games ${TOOL_MAIN_SOURCE})
 add_executable(runTests ${TEST_SOURCE})
