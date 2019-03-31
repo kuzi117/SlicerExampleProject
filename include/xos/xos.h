@@ -1,6 +1,6 @@
 #ifndef SLICEREXAMPLEPROJECT_XOS_H
 #define SLICEREXAMPLEPROJECT_XOS_H
 
-void playXOs();
+void playXOs(void);
 
 #endif // SLICEREXAMPLEPROJECT_XOS_H
