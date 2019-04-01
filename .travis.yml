@@ -15,11 +15,10 @@ env:
 
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
-  - echo "SINCE: ${since}"
+  - echo "old sha: ${since}"
   - ./setupTests.sh
   - which opt || true
   - opt --version || true
-  - cp src/tests/unslicedTests.c src/tests/testSlice.c
 
 script:
   - cmake .
