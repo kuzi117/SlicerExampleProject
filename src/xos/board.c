@@ -21,5 +21,25 @@ void advanceTurn(XOGame *game) {
 }
 
 bool makePlay(XOGame *game, unsigned int x, unsigned int y) {
+  // Check that the tile is empty.
+  if (game->tiles[y][x] != TILE_NONE)
+    return false;
 
+  // Update the selected tile.
+  switch (game->turn) {
+  case TURN_X: {
+    game->tiles[y][x] = TILE_X;
+    break;
+  }
+  case TURN_O: {
+    game->tiles[y][x] = TILE_O;
+    break;
+  }
+  default: {
+    assert(false && "Bad turn value in makePlay.");
+    return false;
+  }
+  }
+
+  return true;
 }

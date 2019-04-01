@@ -11,7 +11,7 @@ addons:
 
 env:
   global:
-    - since="be1307c4399a1a978eadc4f9feb6a3d3c624696f" LLVM_PATH="/usr/lib/llvm-8/" LLVM_DIR="${LLVM_PATH}/cmake" LLVM_BIN="${LLVM_PATH}/bin"
+    - since="661f917814a09b19f01fe1eee35c24d5372c8f96" LLVM_PATH="/usr/lib/llvm-8/" LLVM_DIR="${LLVM_PATH}/cmake" LLVM_BIN="${LLVM_PATH}/bin"
 
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
