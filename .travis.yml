@@ -11,14 +11,11 @@ addons:
 
 env:
   global:
-    - since="5195fdbcd9c318c2fa40463d25046a90ddca549a"
+    - since="5195fdbcd9c318c2fa40463d25046a90ddca549a" LLVM_DIR="/usr/lib/llvm-8/cmake"
 
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
   - echo "${since}"
-  - ls /usr/lib/
-  - ls /usr/lib/llvm-8/
-  - ls /usr/lib/llvm-8/cmake
   - ./setupTests.sh
   - cp src/tests/unslicedTests.c src/tests/testSlice.c
 
