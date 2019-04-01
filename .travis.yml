@@ -1,8 +1,5 @@
 language: c
 
-env:
-  - since="5195fdbcd9c318c2fa40463d25046a90ddca549a"
-
 dist: xenial
 addons:
   apt:
@@ -13,6 +10,7 @@ addons:
 
 env:
   - MATRIX_EVAL="CC=clang-8 && CXX=clang++-8"
+  - since="5195fdbcd9c318c2fa40463d25046a90ddca549a"
 
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
