@@ -7,10 +7,11 @@ addons:
       - llvm-toolchain-xenial-8
     packages:
       - clang-8
+      - llvm-8-dev
 
 env:
-  - MATRIX_EVAL="CC=clang-8 && CXX=clang++-8"
-  - since="5195fdbcd9c318c2fa40463d25046a90ddca549a"
+  global:
+    - since="5195fdbcd9c318c2fa40463d25046a90ddca549a"
 
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
