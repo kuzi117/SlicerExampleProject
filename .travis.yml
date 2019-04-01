@@ -16,8 +16,9 @@ env:
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
   - echo "${since}"
-  - ls /usr/local/
-  - ls /usr/local/clang-8.0.0/lib/cmake/llvm
+  - ls /usr/lib/
+  - ls /usr/lib/llvm-8/
+  - ls /usr/lib/llvm-8/cmake
   - ./setupTests.sh
   - cp src/tests/unslicedTests.c src/tests/testSlice.c
 
