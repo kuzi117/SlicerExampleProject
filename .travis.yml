@@ -16,10 +16,10 @@ env:
 
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
-  - setupTests.sh
   - cp src/tests/unslicedTests.c src/tests/testSlice.c
 
 script:
+  - setupTests.sh
   - cmake .
   - make -j4
   - ./src/runTests
