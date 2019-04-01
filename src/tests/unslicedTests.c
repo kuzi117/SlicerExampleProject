@@ -9,4 +9,5 @@ void getAllTests(CuSuite *suite) {
   SUITE_ADD_TEST(suite, TestTurnO);
   SUITE_ADD_TEST(suite, TestGameInit);
   SUITE_ADD_TEST(suite, TestAdvanceTurn);
+  SUITE_ADD_TEST(suite, TestMakePlay);
 }

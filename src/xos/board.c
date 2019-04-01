@@ -1,7 +1,7 @@
 #include "xos/board.h"
 
+#include <assert.h>
 #include <stddef.h>
-#include <xos/board.h>
 
 void initGame(XOGame *game) {
   // Init turn.
@@ -18,4 +18,8 @@ void initGame(XOGame *game) {
 void advanceTurn(XOGame *game) {
   // Toggle turn.
   game->turn = game->turn == TURN_X ? TURN_O : TURN_X;
+}
+
+bool makePlay(XOGame *game, unsigned int x, unsigned int y) {
+
 }

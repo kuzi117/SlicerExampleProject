@@ -18,5 +18,6 @@ void TestTurnX(CuTest *test);
 void TestTurnO(CuTest *test);
 void TestGameInit(CuTest *test);
 void TestAdvanceTurn(CuTest *test);
+void TestMakePlay(CuTest *test);
 
 #endif // TOTEST_ALLTESTS_H

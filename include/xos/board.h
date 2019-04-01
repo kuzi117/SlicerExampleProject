@@ -26,4 +26,7 @@ void initGame(XOGame *game);
 // Advance the turn.
 void advanceTurn(XOGame *game);
 
+// Make a play.
+bool makePlay(XOGame *game, unsigned int x, unsigned int y);
+
 #endif // TOTEST_XOS_BOARD_H

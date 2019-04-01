@@ -66,3 +66,31 @@ void TestAdvanceTurn(CuTest *test) {
   advanceTurn(gp);
   CuAssertIntEquals(test, game.turn, TURN_X);
 }
+
+void TestMakePlay(CuTest *test) {
+  XOGame game;
+  XOGame *gp = &game;
+  initGame(gp);
+
+  // Check X plays.
+  for (unsigned int i = 0; i < 3; ++i) {
+    for (unsigned int j = 0; j < 3; ++j) {
+      CuAssertIntEquals(test, game.tiles[i][j], TILE_NONE);
+      makePlay(gp, j, i);
+      CuAssertIntEquals(test, game.tiles[i][j], TILE_X);
+    }
+  }
+
+  // Reinit and advance to O.
+  initGame(gp);
+  advanceTurn(gp);
+
+  // Check O plays.
+  for (unsigned int i = 0; i < 3; ++i) {
+    for (unsigned int j = 0; j < 3; ++j) {
+      CuAssertIntEquals(test, game.tiles[i][j], TILE_NONE);
+      makePlay(gp, j, i);
+      CuAssertIntEquals(test, game.tiles[i][j], TILE_O);
+    }
+  }
+}
