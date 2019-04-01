@@ -15,7 +15,7 @@ env:
 
 # TODO: Building testSlice.c is currently faked. This will be replaced by the slicing tool.
 before_script:
-  - echo "old sha: ${since}"
+  - echo "old sha=${since}"
   - ./setupTests.sh
   - which opt || true
   - opt --version || true
